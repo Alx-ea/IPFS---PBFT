@@ -56,13 +56,19 @@ curl <node_ip>:3002/blockchain # for viewing the blockchain
 #### Append
 
 ```sh
-curl -XPOST <master_node_ip>:3002/createblock -H "Content-Type: application/json" -d '{
- "timestamp": "YYYY-MM-DD HH:MM:SS",  // optional
- "carPlate": "<plate>",
- "block": {
-  "data": "any data, can be an array, or json, str..."
- }
-}' # for creating a new block
+curl -X POST "http://<node_address>:3002/createBlock" -H "Content-Type: application/json" -d '{
+  "timestamp": "<timestamp>",
+  "patientId": "<patient_id>",
+  "block": {
+    "vitals": {
+      "bodyTemp": "<body_temperature>",
+      "pulseRate": "<pulse_rate>",
+      "respirationRate": "<respiration_rate>",
+      "bloodOxygen": "<blood_oxygen_level>",
+      "glucoseLevel": "<glucose_level>"
+    }
+  }
+}'
 ```
 
 #### View
