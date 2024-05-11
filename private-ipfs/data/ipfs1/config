@@ -1,0 +1,139 @@
+{
+  "API": {
+    "HTTPHeaders": {}
+  },
+  "Addresses": {
+    "API": "/ip4/0.0.0.0/tcp/5001",
+    "Announce": [],
+    "Gateway": "/ip4/0.0.0.0/tcp/8080",
+    "NoAnnounce": [],
+    "Swarm": [
+      "/ip4/0.0.0.0/tcp/4001",
+      "/ip6/::/tcp/4001"
+    ]
+  },
+  "Bootstrap": [
+    "/dnsaddr/bootstrap.libp2p.io/ipfs/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN",
+    "/dnsaddr/bootstrap.libp2p.io/ipfs/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa",
+    "/dnsaddr/bootstrap.libp2p.io/ipfs/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb",
+    "/dnsaddr/bootstrap.libp2p.io/ipfs/QmcZf59bWwK5XFi76CZX8cbJ4BhTzzA3gU1ZjYZcYW3dwt",
+    "/ip4/104.131.131.82/tcp/4001/ipfs/QmaCpDMGvV2BGHeYERUEnRQAwe3N8SzbUtfsmvsqQLuvuJ",
+    "/ip4/104.236.179.241/tcp/4001/ipfs/QmSoLPppuBtQSGwKDZT2M73ULpjvfd3aZ6ha4oFGL1KrGM",
+    "/ip4/128.199.219.111/tcp/4001/ipfs/QmSoLSafTMBsPKadTEgaXctDQVcqN88CNLHXMkTNwMKPnu",
+    "/ip4/104.236.76.40/tcp/4001/ipfs/QmSoLV4Bbm51jM9C4gDYZQ9Cy3U6aXMJDAbzgu2fzaDs64",
+    "/ip4/178.62.158.247/tcp/4001/ipfs/QmSoLer265NRgSp2LA3dPaeykiS1J6DifTC88f5uVQKNAd",
+    "/ip6/2604:a880:1:20::203:d001/tcp/4001/ipfs/QmSoLPppuBtQSGwKDZT2M73ULpjvfd3aZ6ha4oFGL1KrGM",
+    "/ip6/2400:6180:0:d0::151:6001/tcp/4001/ipfs/QmSoLSafTMBsPKadTEgaXctDQVcqN88CNLHXMkTNwMKPnu",
+    "/ip6/2604:a880:800:10::4a:5001/tcp/4001/ipfs/QmSoLV4Bbm51jM9C4gDYZQ9Cy3U6aXMJDAbzgu2fzaDs64",
+    "/ip6/2a03:b0c0:0:1010::23:1001/tcp/4001/ipfs/QmSoLer265NRgSp2LA3dPaeykiS1J6DifTC88f5uVQKNAd"
+  ],
+  "Datastore": {
+    "BloomFilterSize": 0,
+    "GCPeriod": "1h",
+    "HashOnRead": false,
+    "Spec": {
+      "mounts": [
+        {
+          "child": {
+            "path": "blocks",
+            "shardFunc": "/repo/flatfs/shard/v1/next-to-last/2",
+            "sync": true,
+            "type": "flatfs"
+          },
+          "mountpoint": "/blocks",
+          "prefix": "flatfs.datastore",
+          "type": "measure"
+        },
+        {
+          "child": {
+            "compression": "none",
+            "path": "datastore",
+            "type": "levelds"
+          },
+          "mountpoint": "/",
+          "prefix": "leveldb.datastore",
+          "type": "measure"
+        }
+      ],
+      "type": "mount"
+    },
+    "StorageGCWatermark": 90,
+    "StorageMax": "10GB"
+  },
+  "Discovery": {
+    "MDNS": {
+      "Enabled": true,
+      "Interval": 10
+    }
+  },
+  "Experimental": {
+    "FilestoreEnabled": false,
+    "Libp2pStreamMounting": false,
+    "P2pHttpProxy": false,
+    "PreferTLS": false,
+    "QUIC": false,
+    "ShardingEnabled": false,
+    "UrlstoreEnabled": false
+  },
+  "Gateway": {
+    "APICommands": [],
+    "HTTPHeaders": {
+      "Access-Control-Allow-Headers": [
+        "X-Requested-With",
+        "Range",
+        "User-Agent"
+      ],
+      "Access-Control-Allow-Methods": [
+        "GET"
+      ],
+      "Access-Control-Allow-Origin": [
+        "*"
+      ]
+    },
+    "NoFetch": false,
+    "PathPrefixes": [],
+    "RootRedirect": "",
+    "Writable": false
+  },
+  "Identity": {
+    "PeerID": "QmfCWkrxBBBCxd3KjHqkBdAuD8xrfwen25Yus8LyPioDQo",
+    "PrivKey": "CAASpgkwggSiAgEAAoIBAQCyuT31vWYAoDOb8GZZbm+bce988WuhVj5mSNZNUKLQ0hVyzfDd3nf4qm11ZxrKmMKk863nObprucP68TE+AYhraxByVIdXDbcrweGU6Xz8UTMKgpRmERY2oxjGajmpkM7KgrqF8Twd4sYuoJPqlx3fkjttEP1luOoSo7knflZ6LA/nfitTEh+7sXoPODNeQUAvMDgf5Rbq1xou1j5xshLUmK1FqKGcZcVOXR2Mmj0JpqNBOcb54+ZhMmtk01YQxwGyfLSYeBlKafl3GSQJmUjcHEYeDSKqM8KoPDQ5yBW9z7JK7TWiLRGCiIvdCqI9o8p1MQRi50VybBtItNjnqDWBAgMBAAECggEACrIPRS+KdSshK4nddiinwTO2U1HXURZqMZDWUlYrCDgqVG6CpaR0pYr9dfMvpUQzEdALbjUENQIu+kuI2N8anOMRXuY0Gz+U4Kd/qnu2oRry5QQfgWQwYiCskOM2hDFITtI3+2AOavNxTMULVRSqEwEbUVGc+INybp8hq31iC3mR9wclUiyHHdHDNuOXdTp5UT3nCgXy16+CtEds2uixQBNS3XtoWxBzR1WQn833U6Qq1IuGrvdzjTElT2m/DrO/8K1xCxcLzJF39eCXdoWl+y58z9Ni8iNDz4Y1OP1TAwLrB76MwK8AdtlwQUN+VmylNRG3c+/7jY1Y75tM6kELyQKBgQDSJPkZErxhok+2GQ51IAJrgIWfw25sYVwuuS53K2I9JcjnMbyxDIIdI1hy3SWfhBkvkhcAuZNuyzJRvmc9xr1iCEAC9hFCo5o2thU85TTntPrubfcn2aqTZYODGfL8/j+dVs0L9BbreOQec9lkoikQ+Tuw9F45diXCp9cdtaMRdwKBgQDZuQxLNq82cIds+cQGgwwkua7ihBW+qjlcQ8dL4yBvrTUldD8bnH/lzLWPDQSp8vuaBJ62bEylwdF2bnrQ2foL/W9dIvu7p2GtIEcL4iIHi1vT0PhtErVxZVCZKAVmAmgh1Zr5TDF8/aNxBTX3YQ+zf2w4Ci6+FH9c38YRg9/uxwKBgF+R2wuRHsVUWOYa/R09Qnx7hcnDyntVx+Oj6kLeIx5mCblDQGpQovf3dClA8/RY0k91JCr7Ota/aJIOgstwj/5+fAYcvHrPBrptErmQEAB0qU44CphAALhqCWZdLcnrIyk+KaCPEMFkSHKlAzAmI4EJqCDw8c02MzQUuttTGOc/AoGAU69CwG4mboBWLVbbN72LH1qXk809Jmn7XjFXGx4Ty5kBwoGp+AzxQ/ypFHDmiAQzHQIFlwyNcXDL9/+DCV+fMpiZA2184KX3bznm1PR4K/ous32w3wu/3fQZRKUTXiAysj6OMKBOrUI4XiqokYsnI9EoYWnYiYsLYUFJulW77uUCgYAn7120gVjxNpDSkZE19diQ4cBkqR9b0gbYaOxR+bnS5gyxSEnXYfpUoyuLa3/k+eMV9BisZiugNXT8ZC4EuP4XtOeGXUs7FbYXUWQYmeX/D/z0SxEKkczQ7XMRQlcrds/TRbkHoy/KEkbbdMUaFZQEoRD5uCuJvIFAkQDyu2N1fg=="
+  },
+  "Ipns": {
+    "RecordLifetime": "",
+    "RepublishPeriod": "",
+    "ResolveCacheSize": 128
+  },
+  "Mounts": {
+    "FuseAllowOther": false,
+    "IPFS": "/ipfs",
+    "IPNS": "/ipns"
+  },
+  "Pubsub": {
+    "DisableSigning": false,
+    "Router": "",
+    "StrictSignatureVerification": false
+  },
+  "Reprovider": {
+    "Interval": "12h",
+    "Strategy": "all"
+  },
+  "Routing": {
+    "Type": "dht"
+  },
+  "Swarm": {
+    "AddrFilters": null,
+    "ConnMgr": {
+      "GracePeriod": "20s",
+      "HighWater": 900,
+      "LowWater": 600,
+      "Type": "basic"
+    },
+    "DisableBandwidthMetrics": false,
+    "DisableNatPortMap": false,
+    "DisableRelay": false,
+    "EnableAutoNATService": false,
+    "EnableAutoRelay": false,
+    "EnableRelayHop": false
+  }
+}
