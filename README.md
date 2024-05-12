@@ -1,0 +1,4 @@
+- Go into IPFS, use the make file
+- Go into PBFT, run the scripts,
+- PBFT script_4 will generate a output file
+- Use calculate.py to generate statistics

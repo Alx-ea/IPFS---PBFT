@@ -1,0 +1,4 @@
+Average Block Creation Local Time: 0.00 ms
+Average Validation Local Time: 0.00 ms
+Average Validation Total Time: 0.00 ms
+Average Consensus Time: 0.00 ms
